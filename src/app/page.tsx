@@ -22,7 +22,7 @@ export default function Home() {
         <div className='flex flex-col gap-2'>
           <div className='flex flex-row lg:justify-start justify-center gap-2 lg:mb-[-10px] mb-[-20px]'>
             <Image
-              src='/210jazzorchestra/sax.png'
+              src='/sax.png'
               alt='sax'
               height={80}
               className='antialiased mr-[-30px] mt-[-25px] mb-2'
@@ -89,7 +89,7 @@ export default function Home() {
       </header>
       <main className='flex flex-col lg:gap-8 gap-4 max-h-full w-full'>
         <Image
-          src='/210jazzorchestra/photo-1.png'
+          src='/photo-1.png'
           alt='210 Jazz Orchestra'
           className='object-cover w-full'
         />
@@ -97,7 +97,7 @@ export default function Home() {
         <div className=' flex-col '>
           <div className='flex flex-row lg:gap-10 gap-4'>
             <Image
-              src='/210jazzorchestra/photo-2.png'
+              src='/photo-2.png'
               alt='210 Jazz Orchestra'
               width={250}
               height={250}
