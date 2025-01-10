@@ -11,7 +11,6 @@ import {
   faTiktok,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import Script from 'next/script';
 import { josefin } from './fonts';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -19,11 +18,12 @@ import ContactForm from '@/components/contact-form';
 import InstagramFeed from '@/components/instagram-feed';
 import Link from 'next/link';
 import content from './content.json';
-import BandsintownWidget from '@/components/bandsintown-widget';
+import BandsintownWidget from '@/components/bandsintown/bandsintown-widget';
 
 const SITE_MAIL_RECEIVER = process.env.SITE_MAIL_RECEIVER;
+const BANDSINTOWN_APPID = process.env.BANDSINTOWN_APPID;
 
-export default async function Home() {
+export default function Home() {
   return (
     <div>
       <header className='flex lg:flex-row md:flex-row sm:flex-row flex-col lg:items-end items-center justify-center gap-4 lg:justify-between md:justify-between sm:justify-between lg:pb-2 pb-6 flex-wrap'>
@@ -205,7 +205,10 @@ export default async function Home() {
                 Shows
               </h2>
 
-              <BandsintownWidget artist={content.bandsintownArtist} />
+              <BandsintownWidget
+                artist={content.bandsintownArtist}
+                appId={BANDSINTOWN_APPID || ''}
+              />
             </div>
 
             <hr className='w-full border-stone-800 lg:hidden' />
@@ -214,7 +217,7 @@ export default async function Home() {
               Videos
             </h2>
 
-            <div className='flex flex-col lg:flex-col lg:gap-6 gap-4 lg:justify-start md:justify-around sm:justify-around justify-start lg:basis-5/12 md:flex-row sm:flex-row md:flex-wrap sm:flex-wrap lg:flex-nowrap'>
+            <div className='flex flex-col lg:flex-col gap-4 lg:justify-start md:justify-around sm:justify-around justify-start lg:basis-5/12 md:flex-row sm:flex-row md:flex-wrap sm:flex-wrap lg:flex-nowrap'>
               <iframe
                 width='auto'
                 className='aspect-video basis-5/12'
