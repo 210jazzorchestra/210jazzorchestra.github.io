@@ -1,5 +1,9 @@
 import Image from 'next/image';
 
+import photo1 from '@/assets/photo-1.png';
+import photo2 from '@/assets/photo-2.png';
+import sax from '@/assets/sax.png';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
@@ -14,23 +18,24 @@ import { Button } from '@/components/ui/button';
 import ContactForm from '@/components/contact-form';
 import InstagramFeed from '@/components/instagram-feed';
 import Link from 'next/link';
+import content from './content.json';
 
-export default function Home() {
+const SITE_MAIL_RECEIVER = process.env.SITE_MAIL_RECEIVER;
+
+export default async function Home() {
   return (
     <div>
-      <header className='flex lg:flex-row flex-col lg:items-end items-center justify-center gap-4 lg:justify-between lg:pb-2 pb-6 flex-wrap'>
+      <header className='flex lg:flex-row md:flex-row sm:flex-row md:justify-between flex-col lg:items-end items-center justify-center gap-4 lg:justify-between md:justify-between sm:justify-between lg:pb-2 pb-6 flex-wrap'>
         <div className='flex flex-col gap-2'>
           <div className='flex flex-row lg:justify-start justify-center gap-2 lg:mb-[-10px] mb-[-20px]'>
             <Image
-              src='/sax.png'
+              src={sax}
               alt='sax'
-              height={80}
-              width={80}
-              className='antialiased mr-[-30px] mt-[-25px] mb-2'
+              className='antialiased mr-[-20px] mt-[-15px] mb-2 lg:block md:block sm:block lg:w-12 md:w-10 sm:w-10 hidden'
             />
             <h1
               className={cn(
-                'text-[36px] lg:text-7xl font-bold uppercase text-[#71a3c1] mt-[-8px] lg:mt-[-5px] antialiased',
+                'text-[32px] lg:text-7xl font-bold uppercase text-[#71a3c1] mt-[-3px] lg:mt-[-5px] antialiased',
                 josefin.className
               )}
             >
@@ -39,7 +44,7 @@ export default function Home() {
 
             <h1
               className={cn(
-                'text-3xl lg:text-6xl font-bold uppercase text-[#3f0385] antialiased',
+                'text-[28px] lg:text-6xl font-bold uppercase text-[#3f0385] antialiased',
                 josefin.className
               )}
             >
@@ -47,7 +52,7 @@ export default function Home() {
             </h1>
             <h1
               className={cn(
-                'text-3xl lg:text-6xl font-bold uppercase antialiased',
+                'text-[28px] lg:text-6xl font-bold uppercase antialiased',
                 josefin.className
               )}
             >
@@ -55,9 +60,9 @@ export default function Home() {
             </h1>
           </div>
         </div>
-        <div className='lg:flex gap-6 mb-1 hidden'>
+        <div className='lg:flex md:flex lg:mt-0 md:mb-[-20px] sm:mb-[-20px] sm:flex gap-6 lg:mb-1 hidden'>
           <Link
-            href='https://www.instagram.com/210jazzorchestra'
+            href={`https://www.instagram.com/${content.instagramAccount}`}
             target='_blank'
           >
             <FontAwesomeIcon
@@ -66,7 +71,7 @@ export default function Home() {
             />
           </Link>
           <Link
-            href='https://www.youtube.com/channel/210jazzorchestra'
+            href={`https://www.youtube.com/channel/${content.youtubeAccount}`}
             target='_blank'
           >
             <FontAwesomeIcon
@@ -74,13 +79,16 @@ export default function Home() {
               className='lg:w-8 lg:h-8 w-5 h-5'
             />
           </Link>
-          <Link href='https://www.tiktok.com/@210jazzorchestra' target='_blank'>
+          <Link
+            href={`https://www.tiktok.com/@${content.tiktokAccount}`}
+            target='_blank'
+          >
             <FontAwesomeIcon
               icon={faTiktok}
               className='lg:w-8 lg:h-8 w-5 h-5'
             />
           </Link>
-          <Link href='mailto:210jazzorchestra@gmail.com' target='_blank'>
+          <Link href={`mailto:${SITE_MAIL_RECEIVER}`} target='_blank'>
             <FontAwesomeIcon
               icon={faEnvelope}
               className='lg:w-8 lg:h-8 w-5 h-5'
@@ -90,21 +98,21 @@ export default function Home() {
       </header>
       <main className='flex flex-col lg:gap-8 gap-4 max-h-full w-full'>
         <Image
-          src='/photo-1.png'
-          alt='210 Jazz Orchestra'
+          src={photo1}
+          alt={content.title}
           width={1000}
           height={1000}
           className='object-cover w-full'
         />
 
-        <div className=' flex-col '>
+        <div className='flex-col'>
           <div className='flex flex-row lg:gap-10 gap-4'>
             <Image
-              src='/photo-2.png'
-              alt='210 Jazz Orchestra'
+              src={photo2}
+              alt={content.title}
               width={250}
               height={250}
-              className='lg:basis-1/3 aspect-square lg:block hidden antialiased border-4 border-stone-800 rounded-lg'
+              className='lg:basis-1/3 aspect-square object-cover lg:block md:block sm:hidden hidden antialiased border-4 border-stone-800 rounded-lg'
             />
             <div className='flex flex-col lg:gap-4 sm:gap-3 lg:basis-2/3'>
               <h2
@@ -115,23 +123,7 @@ export default function Home() {
               >
                 About us
               </h2>
-              <p className='lg:text-base text-sm'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Quisquam, quos. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Quisquam, quos. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Quisquam, quos.
-              </p>
+              <p className='lg:text-base text-sm'>{content.bio}</p>
             </div>
           </div>
 
@@ -146,25 +138,21 @@ export default function Home() {
             >
               Press
             </h2>
-            <div className='flex lg:gap-10 lg:flex-row flex-col gap-4'>
+            <div className='flex lg:gap-10 lg:flex-row md:flex-row sm:flex-row flex-col gap-4'>
               <div className='flex flex-col gap-2'>
                 <p className='text-stone-300 italic lg:text-base text-sm'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quos. Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Quisquam, quos.
+                  {content.pressQuoteOne}
                 </p>
                 <p className='text-stone-300 italic lg:text-base text-sm'>
-                  - San Antonio Express-News
+                  - {content.pressQuoteOneSource}
                 </p>
               </div>
               <div className='flex flex-col gap-2'>
                 <p className='text-stone-300 italic lg:text-base text-sm'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quos. Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Quisquam, quos.
+                  {content.pressQuoteTwo}
                 </p>
                 <p className='text-stone-300 italic lg:text-base text-sm'>
-                  - San Antonio Express-News
+                  - {content.pressQuoteTwoSource}
                 </p>
               </div>
             </div>
@@ -173,7 +161,7 @@ export default function Home() {
           <hr className='w-full border-stone-800 lg:block hidden lg:my-4' />
 
           <div className='flex lg:flex-row flex-col lg:gap-10 gap-4 lg:mt-0 mt-4'>
-            <div className='flex flex-col lg:gap-5 gap-4 lg:basis-7/12 basis-full'>
+            <div className='flex flex-col lg:gap-5 gap-4 lg:basis-7/12 basis-full lg:mt-0 mt-4'>
               <div className='flex flex-col gap-1 bg-stone-900 rounded-lg p-4'>
                 <h2
                   className={cn(
@@ -184,22 +172,32 @@ export default function Home() {
                   The Band
                 </h2>
                 <hr className='w-full border-stone-800 lg:pb-3 pb-0' />
-                <h6 className='text-stone-400 font-bold lg:text-base text-sm'>
-                  Saxophones
-                </h6>
-                <p className='text-xs'>John Doe, Jane Doe</p>
-                <h6 className='text-stone-400 font-bold lg:text-base text-sm'>
-                  Trumpets
-                </h6>
-                <p className='text-xs'>John Doe, Jane Doe</p>
-                <h6 className='text-stone-400 font-bold lg:text-base text-sm'>
-                  Trombones
-                </h6>
-                <p className='text-xs'>John Doe, Jane Doe</p>
-                <h6 className='text-stone-400 font-bold lg:text-base text-sm'>
-                  Rhythm
-                </h6>
-                <p className='text-xs'>John Doe, Jane Doe</p>
+                <div className='flex lg:flex-col md:flex-row sm:flex-row flex-col lg:flex-nowrap md:flex-wrap sm:flex-wrap'>
+                  <div className='flex flex-col gap-1 md:basis-1/2 sm:basis-1/2 md:w-full sm:w-full'>
+                    <h6 className='text-stone-400 font-bold lg:text-base md:text-base text-sm'>
+                      Saxophones
+                    </h6>
+                    <p className='text-xs'>{content.saxophones}</p>
+                  </div>
+                  <div className='flex flex-col gap-1 md:basis-1/2 sm:basis-1/2 md:w-full sm:w-full mt-6'>
+                    <h6 className='text-stone-400 font-bold lg:text-base md:text-base text-sm'>
+                      Trumpets
+                    </h6>
+                    <p className='text-xs'>{content.trumpets}</p>
+                  </div>
+                  <div className='flex flex-col gap-1 md:basis-1/2 sm:basis-1/2  md:w-full sm:w-full mt-6'>
+                    <h6 className='text-stone-400 font-bold lg:text-base md:text-base text-sm'>
+                      Trombones
+                    </h6>
+                    <p className='text-xs'>{content.trombones}</p>
+                  </div>
+                  <div className='flex flex-col gap-1  md:basis-1/2 sm:basis-1/2 md:w-full sm:w-full mt-6'>
+                    <h6 className='text-stone-400 font-bold lg:text-base md:text-base text-sm'>
+                      Rhythm
+                    </h6>
+                    <p className='text-xs'>{content.rhythm}</p>
+                  </div>
+                </div>
               </div>
 
               <h2 className='font-bold lg:text-4xl text-2xl text-[#71a3c1] uppercase lg:my-0 my-4'>
@@ -209,7 +207,7 @@ export default function Home() {
               <div className='mx-[-10px] lg:mt-4 mt-[-20px]'>
                 <a
                   className='bit-widget-initializer'
-                  data-artist-name='Billie Eilish'
+                  data-artist-name={content.bandsintownArtist}
                   data-display-local-dates='false'
                   data-auto-style='true'
                   data-text-color='#FFFFFF'
@@ -236,11 +234,11 @@ export default function Home() {
               Videos
             </h2>
 
-            <div className='flex flex-col gap-6 lg:basis-5/12'>
+            <div className='flex flex-col lg:flex-col lg:gap-6 gap-4 lg:justify-start md:justify-around sm:justify-around justify-start lg:basis-5/12 md:flex-row sm:flex-row md:flex-wrap sm:flex-wrap lg:flex-nowrap'>
               <iframe
                 width='auto'
-                className='aspect-video'
-                src='https://www.youtube-nocookie.com/embed/n4hqtmTvYGs?si=GiLF8z28En667M3M'
+                className='aspect-video basis-5/12'
+                src={content.youtubeVideo1}
                 title='YouTube video player'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                 referrerPolicy='strict-origin-when-cross-origin'
@@ -248,8 +246,8 @@ export default function Home() {
               />
               <iframe
                 width='auto'
-                className='aspect-video'
-                src='https://www.youtube-nocookie.com/embed/J_Ms53xorZ8?si=gtx_xM3ChFSI4FAH'
+                className='aspect-video basis-5/12'
+                src={content.youtubeVideo2}
                 title='YouTube video player'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                 referrerPolicy='strict-origin-when-cross-origin'
@@ -257,8 +255,8 @@ export default function Home() {
               />
               <iframe
                 width='auto'
-                className='aspect-video'
-                src='https://www.youtube-nocookie.com/embed/RGfSIpxy6Es?si=o6JyLva5jYl5Mg6K'
+                className='aspect-video basis-5/12'
+                src={content.youtubeVideo3}
                 title='YouTube video player'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                 referrerPolicy='strict-origin-when-cross-origin'
@@ -266,8 +264,8 @@ export default function Home() {
               />
               <iframe
                 width='auto'
-                className='aspect-video'
-                src='https://www.youtube-nocookie.com/embed/Ks-kRUl6YBs?si=4RjfggyuoYzdSlRL'
+                className='aspect-video basis-5/12'
+                src={content.youtubeVideo4}
                 title='YouTube video player'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                 referrerPolicy='strict-origin-when-cross-origin'
@@ -278,48 +276,49 @@ export default function Home() {
         </div>
 
         <hr className='w-full border-stone-800 my-4 lg:my-0' />
-        <div className='flex gap-4'>
-          <div className='flex flex-col gap-4 basis-1/2'>
-            <h2 className='font-bold lg:text-4xl text-2xl text-[#71a3c1] uppercase lg:my-0 my-4'>
+
+        <div className='flex gap-4 lg:flex-row md:flex-row sm:flex-col flex-col'>
+          <div className='flex flex-col gap-4 lg:basis-1/2 basis-full'>
+            <h2 className='font-bold lg:text-4xl text-2xl text-[#71a3c1] uppercase'>
               Contact Us
             </h2>
             <ContactForm />
           </div>
-          <div className='basis-1/2'>
+          <div className='lg:basis-1/2 basis-full flex justify-center'>
             <InstagramFeed
-              account='210_jazz_orchestra'
-              accountTitle='210 Jazz Orchestra'
+              account={content.instagramAccount}
+              accountTitle={content.instagramAccountTitle}
             />
           </div>
         </div>
 
         <hr className='w-full border-stone-800 my-4 lg:my-0' />
 
-        <div className='flex justify-between gap-4'>
-          <h4 className='font-bold lg:text-3xl text-2xl text-[#71a3c1] uppercase lg:my-0 my-4'>
+        <div className='flex lg:flex-row md:flex-row sm:flex-row flex-col justify-between gap-4 items-center'>
+          <h4 className='font-bold lg:text-3xl text-2xl text-[#71a3c1] uppercase lg:my-0 pb-2 lg:pb-0'>
             Press Kit
           </h4>
-          <div className='flex gap-10'>
+          <div className='flex lg:flex-row md:flex-row sm:flex-row flex-col items-center lg:gap-10 gap-4'>
             <Link
               href='/stage-plots.pdf'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <Button size='lg'>Stage Plots</Button>
+              <Button className='w-40'>Stage Plots</Button>
             </Link>
             <Link
               href='/210-Jazz-Photos.zip'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <Button size='lg'>Press Photos</Button>
+              <Button className='w-40'>Press Photos</Button>
             </Link>
           </div>
         </div>
       </main>
       <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-around mt-5 border-t border-stone-800 pt-5'>
         <Link
-          href='https://www.instagram.com/210_jazz_orchestra'
+          href={`https://www.instagram.com/${content.instagramAccount}`}
           target='_blank'
         >
           <FontAwesomeIcon
@@ -328,7 +327,7 @@ export default function Home() {
           />
         </Link>
         <Link
-          href='https://www.youtube.com/channel/210jazzorchestra'
+          href={`https://www.youtube.com/channel/${content.youtubeAccount}`}
           target='_blank'
         >
           <FontAwesomeIcon
@@ -336,13 +335,16 @@ export default function Home() {
             className='lg:w-8 lg:h-8 w-10 h-10'
           />
         </Link>
-        <Link href='https://www.tiktok.com/@210jazzorchestra' target='_blank'>
+        <Link
+          href={`https://www.tiktok.com/@${content.tiktokAccount}`}
+          target='_blank'
+        >
           <FontAwesomeIcon
             icon={faTiktok}
             className='lg:w-8 lg:h-8 w-10 h-10'
           />
         </Link>
-        <Link href='mailto:210jazzorchestra@gmail.com' target='_blank'>
+        <Link href={`mailto:${SITE_MAIL_RECEIVER}`} target='_blank'>
           <FontAwesomeIcon
             icon={faEnvelope}
             className='lg:w-8 lg:h-8 w-10 h-10'

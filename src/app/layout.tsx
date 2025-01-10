@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang='en' className='dark'>
       <body className={roboto.variable}>
-        <div className='flex flex-col items-center min-h-screen min-w-screen lg:p-8 lg:pb-10 pb-10 gap-16 p-4'>
+        <div className='flex flex-col items-center min-h-screen min-w-screen lg:p-8 pb-10 p-4'>
           <div className='max-w-screen-lg w-full'>{children}</div>
         </div>
       </body>
