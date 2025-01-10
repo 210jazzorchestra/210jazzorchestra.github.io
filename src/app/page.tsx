@@ -204,6 +204,7 @@ export default async function Home() {
               <h2 className='font-bold lg:text-4xl text-2xl text-[#71a3c1] uppercase lg:my-0 my-4'>
                 Shows
               </h2>
+
               <BandsintownWidget artist={content.bandsintownArtist} />
             </div>
 
