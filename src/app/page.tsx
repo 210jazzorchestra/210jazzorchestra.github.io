@@ -1,8 +1,5 @@
 import Image from 'next/image';
 
-import sax from '@/assets/sax.png';
-import photo2 from '@/assets/photo-2.png';
-import photo1 from '@/assets/photo-1.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
@@ -25,7 +22,7 @@ export default function Home() {
         <div className='flex flex-col gap-2'>
           <div className='flex flex-row lg:justify-start justify-center gap-2 lg:mb-[-10px] mb-[-20px]'>
             <Image
-              src={sax}
+              src='/210jazzorchestra/sax.png'
               alt='sax'
               height={80}
               className='antialiased mr-[-30px] mt-[-25px] mb-2'
@@ -92,7 +89,7 @@ export default function Home() {
       </header>
       <main className='flex flex-col lg:gap-8 gap-4 max-h-full w-full'>
         <Image
-          src={photo1}
+          src='/210jazzorchestra/photo-1.png'
           alt='210 Jazz Orchestra'
           className='object-cover w-full'
         />
@@ -100,7 +97,7 @@ export default function Home() {
         <div className=' flex-col '>
           <div className='flex flex-row lg:gap-10 gap-4'>
             <Image
-              src={photo2}
+              src='/210jazzorchestra/photo-2.png'
               alt='210 Jazz Orchestra'
               width={250}
               height={250}
