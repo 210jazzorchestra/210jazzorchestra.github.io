@@ -19,13 +19,14 @@ import ContactForm from '@/components/contact-form';
 import InstagramFeed from '@/components/instagram-feed';
 import Link from 'next/link';
 import content from './content.json';
+import BandsintownWidget from '@/components/bandsintown-widget';
 
 const SITE_MAIL_RECEIVER = process.env.SITE_MAIL_RECEIVER;
 
 export default async function Home() {
   return (
     <div>
-      <header className='flex lg:flex-row md:flex-row sm:flex-row md:justify-between flex-col lg:items-end items-center justify-center gap-4 lg:justify-between md:justify-between sm:justify-between lg:pb-2 pb-6 flex-wrap'>
+      <header className='flex lg:flex-row md:flex-row sm:flex-row flex-col lg:items-end items-center justify-center gap-4 lg:justify-between md:justify-between sm:justify-between lg:pb-2 pb-6 flex-wrap'>
         <div className='flex flex-col gap-2'>
           <div className='flex flex-row lg:justify-start justify-center gap-2 lg:mb-[-10px] mb-[-20px]'>
             <Image
@@ -203,29 +204,7 @@ export default async function Home() {
               <h2 className='font-bold lg:text-4xl text-2xl text-[#71a3c1] uppercase lg:my-0 my-4'>
                 Shows
               </h2>
-              <Script src='https://widget.bandsintown.com/main.min.js' />
-              <div className='mx-[-10px] lg:mt-4 mt-[-20px]'>
-                <a
-                  className='bit-widget-initializer'
-                  data-artist-name={content.bandsintownArtist}
-                  data-display-local-dates='false'
-                  data-auto-style='true'
-                  data-text-color='#FFFFFF'
-                  data-link-color='#57534e'
-                  data-display-past-dates='true'
-                  data-background-color='rgba(0,0,0,0)'
-                  data-display-limit='4'
-                  data-display-start-time='false'
-                  data-link-text-color='#FFFFFF'
-                  data-display-lineup='false'
-                  data-display-play-my-city='false'
-                  data-display-track-button='false'
-                  data-separator-color='rgba(255, 255, 255, 0.5)'
-                  data-font='Roboto'
-                  data-font-size='14px'
-                  data-display-logo='false'
-                />
-              </div>
+              <BandsintownWidget artist={content.bandsintownArtist} />
             </div>
 
             <hr className='w-full border-stone-800 lg:hidden' />

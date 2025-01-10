@@ -9,9 +9,11 @@ export default function InstagramFeed({
 }) {
   return (
     <>
-      <div className='!bg-black'>
-        <Script async src='https://www.instagram.com/embed.js' />
-      </div>
+      <Script
+        async
+        src='https://www.instagram.com/embed.js'
+        strategy='afterInteractive'
+      />
       <blockquote
         className='instagram-media'
         data-instgrm-permalink={`https://www.instagram.com/${account}/?utm_source=ig_embed&amp;utm_campaign=loading`}
