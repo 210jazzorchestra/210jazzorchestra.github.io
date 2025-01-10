@@ -25,6 +25,7 @@ export default function Home() {
               src='/sax.png'
               alt='sax'
               height={80}
+              width={80}
               className='antialiased mr-[-30px] mt-[-25px] mb-2'
             />
             <h1
@@ -91,6 +92,8 @@ export default function Home() {
         <Image
           src='/photo-1.png'
           alt='210 Jazz Orchestra'
+          width={1000}
+          height={1000}
           className='object-cover w-full'
         />
 
