@@ -31,7 +31,7 @@ Edited
 - **Do not** change the text on the left side of a colon. In the above example, you should not change `"saxophones"` to `"saxophonists"`.
 - **Do not** delete, move, or add any...
   - `"` quotation marks
-    - also don't add quotes within quotes, i.e. "The dog went "woof"")
+    - also don't add quotes within quotes, i.e. "The dog went "woof""
   - `,` commas
     -  okay within quotation marks
   - `:` colons
