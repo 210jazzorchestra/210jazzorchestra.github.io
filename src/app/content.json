@@ -4,13 +4,16 @@
 
   "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. \r Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
 
-  "saxophones": "John Doe, Jane Doe, Jim Doe, Jill Doe",
-  "trumpets": "John Doe, Jane Doe, Jim Doe, Jill Doe",
-  "trombones": "John Doe, Jane Doe, Jim Doe, Jill Doe",
-  "rhythm": "John Doe, Jane Doe, Jim Doe, Jill Doe",
+  "saxophones": "Zac Evans, Zoe Pedroza, Fernando Munoz Jr., Steve Castor, Ethan Aguilar, Luis Mendoza, Isaac Juarez",
+  "trumpets": "Daniel Delgado, Hugo Funes, Cuco Valenzuela, Edgar Ayala",
+  "trombones": "Ryan Isaac Munoz, Todd Lewis, Chase Guerrero, Liam Washington, Andrew Garcia",
+  "percussion": "Jacob Navarijo, Charles Settles, Ezek Zamorano, Alex Luna",
+  "bass": "Ethan Gomes",
+  "guitar": "Timothy Cruz",
+  "piano": "Joseph Davey",
 
-  "pressQuoteOne": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-  "pressQuoteOneSource": "San Antonio Express-News",
+  "pressQuoteOne": "I booked 210 Jazz Orchestra for an evening event at The DoSeum. They were great to work with, from immediate communication throughout the booking process to the evening of the performance. Guests of the event enjoyed the concert, and the entire experience 210 Jazz Orchestra put on! I will definitely rebook in the future for upcoming events.",
+  "pressQuoteOneSource": "Karenna, The DoSeum",
 
   "pressQuoteTwo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
   "pressQuoteTwoSource": "San Antonio Express-News",
