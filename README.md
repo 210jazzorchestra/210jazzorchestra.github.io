@@ -33,9 +33,9 @@ Edited
  - `"` quotation marks
    - also don't add quotes within quotes, i.e. "The dog went "woof"")
  - `,` commas
-   -  commas are fine within quotation marks
- - `:`
-   - colons these are fine within quotation marks
+   -  okay within quotation marks
+ - `:` colons
+   - okay within quotation marks
  - `{` `}` curly brackets 
 
 ### Save your changes
