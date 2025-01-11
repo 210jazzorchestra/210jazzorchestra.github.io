@@ -30,13 +30,13 @@ Edited
 ### If you want to avoid breaking anything, follow these rules:
 - **Do not** change the text on the left side of a colon. In the above example, you should not change `"saxophones"` to `"saxophonists"`.
 - **Do not** delete, move, or add any...
- - `"` quotation marks
-   - also don't add quotes within quotes, i.e. "The dog went "woof"")
- - `,` commas
-   -  okay within quotation marks
- - `:` colons
-   - okay within quotation marks
- - `{` `}` curly brackets 
+  - `"` quotation marks
+    - also don't add quotes within quotes, i.e. "The dog went "woof"")
+  - `,` commas
+    -  okay within quotation marks
+  - `:` colons
+    - okay within quotation marks
+  - `{` `}` curly brackets 
 
 ### Save your changes
 Once you have made your updates click the `Commit Changes...` button in the top right. Describe the change you made in the commit message (i.e. updated youtube links, updated bio), and then click `Commit Changes.` You don't need to add an extended description, and you should choose the default option of committing directly to the `main` branch. 
