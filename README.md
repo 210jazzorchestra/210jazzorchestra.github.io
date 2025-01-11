@@ -11,6 +11,7 @@ Everything else is updated via the contents.json file:
 - Youtube URLs
 - Social Media Accounts
 
+### Editing contents.json
 To edit the contents.json file, [click here](https://github.com/210jazzorchestra/website/edit/main/src/app/content.json).
 
 You should change the text **in between** the quotation marks, and only change the text on the right side of a colon.
@@ -35,7 +36,7 @@ Edited
  - `{` `}` curly brackets
 
 ### Save your changes
-Once you have made your updates click the "Commit Changes..." button in the top right. Describe the change you made in the commit message (i.e. updated youtube links, updated bio), and then click commit changes. You don't need to add an extended description, and you should choose the default option of committing directly to the `main` branch.
+Once you have made your updates click the "Commit Changes..." button in the top right. Describe the change you made in the commit message (i.e. updated youtube links, updated bio), and then click commit changes. You don't need to add an extended description, and you should choose the default option of committing directly to the `main` branch. Then after about a minute, your changes should be reflected on the site.
 
 ### Issues
 If you run into any trouble or have any questions, just complain at Zac.
