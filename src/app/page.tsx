@@ -36,7 +36,7 @@ export default function Home() {
             />
             <h1
               className={cn(
-                'text-[32px] lg:text-7xl font-bold uppercase text-[#71a3c1] mt-[-3px] lg:mt-[-5px] antialiased',
+                'text-[32px] lg:text-7xl font-bold uppercase text-[#fec76f] mt-[-3px] lg:mt-[-5px] antialiased',
                 josefin.className
               )}
             >
@@ -118,7 +118,7 @@ export default function Home() {
             <div className='flex flex-col lg:gap-4 sm:gap-3 lg:basis-2/3'>
               <h2
                 className={cn(
-                  'lg:text-4xl text-2xl font-bold uppercase text-[#71a3c1]',
+                  'lg:text-4xl text-2xl font-bold uppercase text-[#fec76f]',
                   josefin.className
                 )}
               >
@@ -133,7 +133,7 @@ export default function Home() {
           <div className='flex flex-col lg:items-center items-start lg:gap-4 gap-2'>
             <h2
               className={cn(
-                'lg:text-4xl text-2xl font-bold uppercase text-[#71a3c1] lg:pb-2',
+                'lg:text-4xl text-2xl font-bold uppercase text-[#fec76f] lg:pb-2',
                 josefin.className
               )}
             >
@@ -171,7 +171,7 @@ export default function Home() {
               <div className='flex flex-col gap-1 bg-stone-900 rounded-lg p-4'>
                 <h2
                   className={cn(
-                    'lg:text-5xl text-2xl font-bold uppercase text-[#71a3c1]',
+                    'lg:text-5xl text-2xl font-bold uppercase text-[#fec76f]',
                     josefin.className
                   )}
                 >
@@ -206,7 +206,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <h2 className='font-bold lg:text-4xl text-2xl text-[#71a3c1] uppercase lg:my-0 my-4'>
+              <h2 className='font-bold lg:text-4xl text-2xl text-[#fec76f] uppercase lg:my-0 my-4'>
                 Shows
               </h2>
 
@@ -218,7 +218,7 @@ export default function Home() {
 
             <hr className='w-full border-stone-800 lg:hidden' />
 
-            <h2 className='font-bold text-2xl text-[#71a3c1] uppercase lg:hidden'>
+            <h2 className='font-bold text-2xl text-[#fec76f] uppercase lg:hidden'>
               Videos
             </h2>
 
@@ -267,7 +267,7 @@ export default function Home() {
 
         <div className='flex gap-4 lg:flex-row md:flex-row sm:flex-col flex-col'>
           <div className='flex flex-col gap-4 lg:basis-1/2 basis-full'>
-            <h2 className='font-bold lg:text-4xl text-2xl text-[#71a3c1] uppercase'>
+            <h2 className='font-bold lg:text-4xl text-2xl text-[#fec76f] uppercase'>
               Contact Us
             </h2>
             <ContactForm />
@@ -283,7 +283,7 @@ export default function Home() {
         <hr className='w-full border-stone-800 my-4 lg:my-0' />
 
         <div className='flex lg:flex-row md:flex-row sm:flex-row flex-col justify-between gap-4 items-center'>
-          <h4 className='font-bold lg:text-3xl text-2xl text-[#71a3c1] uppercase lg:my-0 pb-2 lg:pb-0'>
+          <h4 className='font-bold lg:text-3xl text-2xl text-[#fec76f] uppercase lg:my-0 pb-2 lg:pb-0'>
             Press Kit
           </h4>
           <div className='flex lg:flex-row md:flex-row sm:flex-row flex-col items-center lg:gap-10 gap-4'>
