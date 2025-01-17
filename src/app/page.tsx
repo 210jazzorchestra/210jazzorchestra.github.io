@@ -148,13 +148,18 @@ export default function Home() {
                   - {content.pressQuoteOneSource}
                 </p>
               </div>
+              
               <div className='flex flex-col gap-2'>
-                <p className='text-stone-300 italic lg:text-base text-sm'>
-                  {content.pressQuoteTwo}
-                </p>
-                <p className='text-stone-300 italic lg:text-base text-sm'>
-                  - {content.pressQuoteTwoSource}
-                </p>
+                {content.pressQuoteTwo &&
+                  <p className='text-stone-300 italic lg:text-base text-sm'>
+                    {content.pressQuoteTwo}
+                  </p>
+                }
+                {content.pressQuoteTwoSource &&
+                  <p className='text-stone-300 italic lg:text-base text-sm'>
+                    - {content.pressQuoteTwoSource}
+                  </p>
+                }
               </div>
             </div>
           </div>
